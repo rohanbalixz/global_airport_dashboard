@@ -80,7 +80,7 @@ global_airport_dashboard/
 ---
 
 ## Screenshot
-![Dashboard Screenshot](screenshots/Screenshot 2025-04-28 at 18.50.41.png)
+![Dashboard Screenshot](global_airport_dashboard/screenshots/Screenshot 2025-04-28 at 18.50.41.png)
 
 ---
 
