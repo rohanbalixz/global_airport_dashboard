@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Airport Categories Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="libs/leaflet.css" />
+</head>
+<body>
+  <header>
+    <h1>Global Airports Dashboard</h1>
+    <div class="controls">
+      <label>Category:
+        <select id="categoryFilter"><option value="All">All</option></select>
+      </label>
+      <label>Theme:
+        <select id="themeSelector">
+          <option value="light">Light</option>
+          <option value="dark">Dark</option>
+        </select>
+      </label>
+      <label>Search:
+        <input id="airportSearch" placeholder="Search airports…" />
+      </label>
+      <div id="legend"></div>
+    </div>
+  </header>
+
+  <main>
+    <!-- 1) Middle row: Map on left; List & Details on right -->
+    <div class="middle-row">
+      <section class="map-panel">
+        <h2>Map</h2>
+        <div id="map"></div>
+      </section>
+      <div class="side-col">
+        <section class="list-panel">
+          <h2>Airport List</h2>
+          <ul id="airportList"></ul>
+        </section>
+        <section class="details-box" id="detailsBox">
+          <em>Click an airport on the map, list, or chart to see details here.</em>
+        </section>
+      </div>
+    </div>
+
+    <!-- 2) Chart panel moved below -->
+    <section class="chart-panel">
+      <div class="chart-header">
+        <h2>Distribution</h2>
+        <label>View:
+          <select id="chartType">
+            <option value="category">By Category</option>
+            <option value="region">By Region</option>
+          </select>
+        </label>
+      </div>
+      <div id="chart"></div>
+      <ul id="chartList" class="list"></ul>
+    </section>
+  </main>
+
+  <script src="libs/d3.v7.min.js"></script>
+  <script src="libs/leaflet.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>

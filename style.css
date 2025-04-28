@@ -1,0 +1,175 @@
+:root {
+  --bg:     #f4f4f4;
+  --card:   #ffffff;
+  --text:   #333;
+  --accent: #007acc;
+}
+body.dark {
+  --bg:     #0b1e34;
+  --card:   #112b45;
+  --text:   #fff;
+  --accent: #0ff;
+}
+
+/* Full viewport, no window scroll */
+html, body {
+  margin:0; padding:0;
+  height:100%; overflow:hidden;
+}
+body {
+  display:flex; flex-direction:column;
+  background:var(--bg); color:var(--text);
+  font-family:'Segoe UI',sans-serif;
+}
+
+/* Header */
+header {
+  flex:0 0 auto;
+  display:flex; align-items:center; gap:1rem;
+  padding:0.5rem 1rem;
+  background:var(--bg);
+  border-bottom:2px solid var(--accent);
+}
+header h1 { flex:1; margin:0; font-size:1.5rem; }
+.controls { display:flex; align-items:center; gap:1rem; }
+.controls label { display:flex; align-items:center; gap:0.3rem; font-size:0.9rem; }
+.controls select, .controls input {
+  background:var(--card); color:var(--text);
+  border:1px solid var(--accent);
+  padding:0.2rem 0.5rem; border-radius:0.25rem;
+}
+#legend {
+  display:flex; flex-wrap:wrap; gap:0.5rem;
+}
+.legend-item {
+  display:flex; align-items:center; font-size:0.85rem;
+}
+.legend-color {
+  width:1rem; height:1rem; margin-right:0.3rem;
+  border:1px solid var(--text);
+}
+
+/* Main container */
+main {
+  flex:1 1 auto;
+  display:flex; flex-direction:column;
+  overflow:hidden;
+}
+
+/* Chart panel */
+.chart-panel {
+  background:var(--card);
+  margin:1rem; padding:0.75rem;
+  border-radius:0.5rem;
+  box-shadow:0 2px 6px rgba(0,0,0,0.1);
+  display:flex; flex-direction:column;
+}
+.chart-header {
+  display:flex; justify-content:space-between; align-items:center;
+  margin-bottom:0.5rem;
+}
+.chart-header h2 { margin:0; color:var(--accent); }
+#chart {
+  height:220px; width:100%;
+  flex:none;
+}
+.chart-panel .list {
+  flex:1; margin-top:0.5rem;
+  list-style:none; padding:0;
+  overflow-y:auto; border-top:1px solid #ccc;
+}
+.chart-panel .list li {
+  padding:0.3rem; cursor:pointer;
+}
+.chart-panel .list li:hover,
+.chart-panel .list li.active {
+  background:rgba(0,0,0,0.05);
+}
+
+/* Middle row */
+.middle-row {
+  flex:1 1 auto;
+  display:flex; gap:1rem;
+  padding:0 1rem;
+  overflow:hidden;
+}
+
+/* Map panel: always square */
+.map-panel {
+  flex:none;                      /* width auto based on aspect-ratio */
+  aspect-ratio: 1 / 1;
+  background:var(--card);
+  border-radius:0.5rem;
+  box-shadow:0 2px 6px rgba(0,0,0,0.1);
+  display:flex; flex-direction:column;
+  overflow:hidden;
+}
+.map-panel h2 {
+  margin:0.5rem; color:var(--accent);
+}
+#map {
+  flex:1; width:100%; height:100%;
+}
+
+/* Side column: two equal panels */
+.side-col {
+  flex:1;                         /* takes remaining width */
+  display:flex; flex-direction:column; gap:1rem;
+  overflow:hidden;
+}
+.list-panel,
+.details-box {
+  flex:1;
+  background:var(--card);
+  border-radius:0.5rem;
+  box-shadow:0 2px 6px rgba(0,0,0,0.1);
+  overflow-y:auto;
+  display:flex; flex-direction:column;
+}
+.list-panel h2,
+.details-box h2 {
+  margin:0.75rem; color:var(--accent);
+}
+/* Make the airport list UL fill its panel and scroll */
+.list-panel {
+  display: flex;
+  flex-direction: column;
+}
+.list-panel ul {
+  flex:1;                    /* fill available vertical space */
+  list-style:none; margin:0; padding:0;
+  overflow-y:auto;           /* enable internal scrolling */
+  padding-right:0.5rem;      /* prevent content under scrollbar */
+}
+.list-panel li {
+  padding:0.4rem; cursor:pointer;
+  border-bottom:1px solid #ddd;
+}
+.list-panel li:hover,
+.list-panel li.active {
+  background:rgba(0,0,0,0.05);
+}
+/* Custom scrollbar styling */
+.list-panel ul::-webkit-scrollbar {
+  width:6px;
+}
+.list-panel ul::-webkit-scrollbar-track {
+  background:transparent;
+}
+.list-panel ul::-webkit-scrollbar-thumb {
+  background:var(--accent);
+  border-radius:3px;
+}
+
+.details-box {
+  padding:0.75rem;
+}
+.details-box em {
+  font-style:italic; margin-bottom:0.5rem;
+}
+.details-box h3 {
+  margin:0 0 0.25rem; font-size:1.1rem;
+}
+.details-box p {
+  margin:0 0 0.5rem; line-height:1.4;
+}
