@@ -52,7 +52,7 @@ global_airport_dashboard/
      http-server -p 8000
      ```
 3. **Open in browser**  
-   Navigate to `http://localhost:8000/`  
+   Navigate to `http://localhost:8000/`
 
 > Direct file access (`file://`) may block CSV loading due to browser security policies.
 
@@ -80,7 +80,7 @@ global_airport_dashboard/
 ---
 
 ## Screenshot
-![Dashboard Screenshot](global_airport_dashboard/screenshots/Screenshot 2025-04-28 at 18.50.41.png)
+![Dashboard Screenshot](screenshots/Screenshot%202025-04-28%20at%2018.50.41.png)
 
 ---
 
@@ -92,8 +92,8 @@ https://rohanbalixz.github.io/global_airport_dashboard/
 ---
 
 ## Technology Stack
-- **HTML5** & **CSS3** for structure and styling  
-- **JavaScript (ES6+)** for interactivity  
+- **HTML5** & **CSS3**  
+- **JavaScript (ES6+)**  
 - **D3.js v7** for CSV parsing, scales, axes, and charts  
 - **Leaflet.js v1.9.3** for interactive mapping  
 - **OpenStreetMap** tile layers
