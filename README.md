@@ -64,7 +64,7 @@ This is a **static** web project requiring only an HTTP server:
 - **Layout**: Flexbox panels with fixed-aspect map
 
 ## Screenshot of the Framework
-![Dashboard Screenshot](./screenshot.png)
+![Dashboard Screenshot](screenshots/Screenshot 2025-04-28 at 18.50.41.png)
 
 ## Full Project Code and Libraries
 All source code is included in the repository. External libraries are loaded via CDN:
@@ -77,3 +77,4 @@ https://rohanbalixz.github.io/global_airport_dashboard/
 
 ## License
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
