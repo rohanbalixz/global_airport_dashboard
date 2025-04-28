@@ -1,80 +1,118 @@
 # Global Airports Dashboard
 
-**Live Demo:**
+**Live Demo:**  
 https://rohanbalixz.github.io/global_airport_dashboard/
+
+---
 
 ## Title of the Work
 Global Airports Dashboard – Interactive Visualization of Global Airports
 
-## Group Members
+## Group Member
 - Rohan Bali
 
+---
+
 ## Description & Task
-**What:** An interactive dashboard visualizing global airport locations, categories, and regional distributions.
-**Why:** To provide an intuitive tool for exploring aviation infrastructure and geographic patterns.
-**How:** Uses Leaflet.js for mapping and D3.js for charts, with real‑time filtering and search.
+**What:** An interactive dashboard visualizing global airport locations, types, and regional distributions.  
+**Why:** To enable intuitive exploration of aviation infrastructure and geographic trends.  
+**How:** Uses Leaflet.js for mapping, D3.js for charts, with dynamic filtering and search.
+
+---
 
 ## Project Structure
 ```plaintext
 global_airport_dashboard/
-├── index.html           # Main HTML page
-├── style.css            # Dashboard styles
-├── main.js              # Data loading and UI logic
+├── index.html           # Main application page
+├── style.css            # Dashboard styling
+├── main.js              # Data loading & UI logic
 ├── data/
-│   └── airports.csv     # OpenFlights airport dataset
+│   └── airports.csv     # OpenFlights airport dataset (CSV)
+├── screenshots/
+│   └── Screenshot 2025-04-28 at 18.50.41.png  # Example screenshot
 └── README.md            # This file
 ```
 
-## How to Run the Project
-This is a **static** web project requiring only an HTTP server:
+---
 
-1. **Clone repository**
+## Installation & Running Locally
+1. **Clone repository**  
    ```bash
    git clone https://github.com/rohanbalixz/global_airport_dashboard.git
    cd global_airport_dashboard
    ```
-2. **Install requirements** (optional: Node.js serves as well):
-   - **Python 3**
+2. **Start a local HTTP server** (required for CSV loading)  
+   - **Python 3:**  
      ```bash
      python3 -m http.server 8000
      ```
-   - **Node.js** (if preferred)
+   - **Node.js (optional):**  
      ```bash
      npm install -g http-server
      http-server -p 8000
      ```
-3. **Open in browser**
-   Navigate to `http://localhost:8000/`
+3. **Open in browser**  
+   Navigate to `http://localhost:8000/`  
 
-> **Note:** Loading via `file://` may block the CSV load due to browser security policies.
+> Direct file access (`file://`) may block CSV loading due to browser security policies.
 
-## Reading the Visualization
-- **Map Panel**: Plots airports as circle markers; color = airport category (e.g., large, medium, small). Clicking a marker shows details.
-- **Airport List**: Scrollable list; each item’s left border color matches its category. Click to center map on that airport.
-- **Details Panel**: Displays selected airport’s name, IATA code, type, city, country, continent, and latitude/longitude.
-- **Distribution Chart**: Bar chart showing counts by category or continent.
-  - **X-axis**: Categories (or continents) labels
-  - **Y-axis**: Number of airports
-  - **Bar color**: Matches map legend (same color scale)
-  - Click a bar to list all airports in that group.
+---
 
-## Visualization Idioms
-- **Color encoding**: Consistent ordinal scale for categories and continents
-- **Interaction**: Click-based selection, search filtering, dropdown filters
-- **Layout**: Flexbox panels with fixed-aspect map
+## Usage & Visualization Details
+- **Map Panel:**  
+  - Circle markers represent airports, colored by category.  
+  - Click a marker to view details in the side panel.  
+- **Airport List:**  
+  - Scrollable and searchable, each item’s border color matches its map marker.  
+  - Clicking a list item centers the map on that airport.  
+- **Details Panel:**  
+  - Displays name, IATA code, type, city, country, continent, and coordinates.  
+- **Distribution Chart:**  
+  - Bar chart of counts by category or continent.  
+  - **X-axis:** Categories (or continents) labels  
+  - **Y-axis:** Number of airports  
+  - Click a bar to list all airports in that group.  
+- **Filters & Themes:**  
+  - Dropdown filters by category.  
+  - Text input filters by name.  
+  - Light/Dark mode toggle via CSS variables.
 
-## Screenshot of the Framework
+---
+
+## Screenshot
 ![Dashboard Screenshot](screenshots/Screenshot 2025-04-28 at 18.50.41.png)
 
-## Full Project Code and Libraries
-All source code is included in the repository. External libraries are loaded via CDN:
-- **D3.js v7**
-- **Leaflet.js v1.9.3**
-- **OpenStreetMap** tiles
+---
 
-## Deployment URL
+## Deployment
+Automated via GitHub Pages:  
+Pushes to `main` publish to:  
 https://rohanbalixz.github.io/global_airport_dashboard/
 
+---
+
+## Technology Stack
+- **HTML5** & **CSS3** for structure and styling  
+- **JavaScript (ES6+)** for interactivity  
+- **D3.js v7** for CSV parsing, scales, axes, and charts  
+- **Leaflet.js v1.9.3** for interactive mapping  
+- **OpenStreetMap** tile layers
+
+---
+
+## Future Enhancements
+- Marker clustering for high-density regions  
+- Integration of real-time flight traffic and route data  
+- CSV/JSON export of filtered subsets  
+- Mobile-responsive UI with touch gestures
+
+---
+
+## Contributing
+Contributions welcome! Please open issues or submit PRs for bugs and features.
+
+---
+
 ## License
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+Licensed under the MIT License. See [LICENSE](LICENSE) for details.
 
